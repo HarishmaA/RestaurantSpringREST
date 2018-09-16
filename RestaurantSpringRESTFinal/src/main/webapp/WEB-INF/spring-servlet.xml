@@ -10,6 +10,6 @@
    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
    <mvc:annotation-driven />
    <context:component-scan base-package ="controllers" />
- <bean id="repocreate" class="repository.RepositoryCRUD"></bean>
-     <bean id="servicecreate" class="service.ServiceCRUD"></bean>
+ <bean id="receiperepo" class="repository.ReceipeRepository"></bean>
+     <bean id="receipeservice" class="service.ReceipeService"></bean>
 </beans>
