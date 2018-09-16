@@ -39,7 +39,7 @@ public class ReceipeRepository {
 		return result;
 	}
 
-	public String update(Long receipeId, String receipeName) {
+	public void update(Long receipeId, String receipeName) {
 
 		Key receipeKey = KeyFactory.createKey("Receipe", receipeId);
 		DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
@@ -49,18 +49,15 @@ public class ReceipeRepository {
 			result = datastoreService.get(receipeKey);
 		} catch (EntityNotFoundException e) {
 			e.printStackTrace();
-			return new String("Oops! Receipe not found!!");
 		}
 		result.setProperty("receipeName", receipeName);
 		datastoreService.put(result);
-		return new String("Successfully Updated!!!");
 
 	}
 
-	public String delete(Long receipeId) {
+	public void delete(Long receipeId) {
 		Key receipeKey = KeyFactory.createKey("Receipe", receipeId);
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		datastore.delete(receipeKey);
-		return new String("Successfully deleted ReceipeId " + receipeId);
 	}
 }

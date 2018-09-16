@@ -8,7 +8,7 @@ function onCreate() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.responseType = 'json';
 	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
+		if (this.readyState === 4 && this.status === 200) {
 			document.getElementById("create-message").innerHTML = "The receipeId is "
 					+ this.response.receipeId
 					+ ".  "
@@ -31,7 +31,7 @@ function onRead() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.responseType = 'json';
 	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
+		if (this.readyState === 4 && this.status === 200) {
 			document.getElementById("read-message").innerHTML = "The receipeId is "
 					+ this.response.receipeId
 					+ ".  "
@@ -60,10 +60,10 @@ function onUpdate() {
 	let xhttp = new XMLHttpRequest();
 
 	xhttp.onload = () => {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("update-message").innerHTML = xhttp.responseText;
+		if (xhttp.readyState === 4 && xhttp.status === 200) {
+			document.getElementById("update-message").innerHTML = "Successfully Updated";
 		} else {
-			document.getElementById("update-message").innerHTML = xttp.responseText;
+			document.getElementById("update-message").innerHTML = "Oops!!Receipe Not Found";
 		}
 	};
 	xhttp.open("PUT", "/update", true);
@@ -75,8 +75,8 @@ function onDelete() {
 
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			document.getElementById("delete-message").innerHTML = this.responseText;
+		if (this.readyState === 4 && this.status === 200) {
+			document.getElementById("delete-message").innerHTML = "Successfully deleted";
 		}
 	};
 	xhttp.open("DELETE", "/delete?receipeId=" + receipeIdDelete.value, true);

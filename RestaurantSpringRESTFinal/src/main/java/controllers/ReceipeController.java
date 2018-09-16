@@ -39,18 +39,18 @@ public class ReceipeController {
 		return receipeDetails;
 	}
 
-	@PutMapping(path = "/update", consumes = "application/json", produces = "text/plain")
-	public String update(@RequestBody Receipe receipeCreated) {
+	@PutMapping(path = "/update", consumes = "application/json")
+	public void update(@RequestBody Receipe receipeCreated) {
 		Long receipeId = receipeCreated.getReceipeId();
 		String receipeName = receipeCreated.getReceipeName();
-		return service.update(receipeId, receipeName);
+		service.update(receipeId, receipeName);
 
 	}
 
-	@DeleteMapping(path = "/delete", produces = "text/plain")
-	public String delete(@RequestParam(value = "receipeId") Long receipeId) {
+	@DeleteMapping(path = "/delete")
+	public void delete(@RequestParam(value = "receipeId") Long receipeId) {
 
-		return service.delete(receipeId);
+		service.delete(receipeId);
 
 	}
 }

@@ -1,5 +1,5 @@
 package service;
-	
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,11 +31,11 @@ public class ReceipeService {
 		return receipeDetails;
 	}
 
-	public String update(Long receipeId, String receipeName) {
-		return repo.update(receipeId, receipeName);
+	public void update(Long receipeId, String receipeName) {
+		repo.update(receipeId, receipeName);
 	}
 
-	public String delete(Long receipeId) {
-		return repo.delete(receipeId);
+	public void delete(Long receipeId) {
+		 repo.delete(receipeId);
 	}
 }
