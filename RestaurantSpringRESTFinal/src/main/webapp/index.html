@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type"
+	content="application/xhtml+xml; charset=UTF-8" />
+<title>Restaurant</title>
+</head>
+
+    <h1>Welcome to our restaurant...</h1>
+    <h1>CREATE</h1><br>
+	<h3>Enter the receipe details...</h3>
+	<h2>RECEIPE ID : <input type="text" id="receipe-id-create"><br> <br></h2>
+	<h2>RECEIPE NAME : <input type="text" id="receipe-name-create"><br></h2>
+	<button type="button" onclick="onCreate()">CREATE</button>
+    <p id = "create-message"></p>
+    <br>
+    <br>
+
+    <h1>READ</h1><br>
+	<h2>RECEIPE ID : <input type="text" id="receipe-id-read"><br> <br></h2>
+	
+	<button type="button" onclick="onRead()">READ</button>
+      <p id = "read-message"></p>
+    <br>
+    <br>
+     
+    <h1>UPDATE</h1><br>
+	<h2>RECEIPE ID : <input type="text" id="receipe-id-update"></h2><br> <br>
+	<h3>Update the receipe name...</h3>
+	<h2>RECEIPE NAME : <input type="text" id="receipe-name-update"></h2><br>
+	<button  type="button" onclick="onUpdate()">UPDATE</button>
+    <p id = "update-message"></p>
+    <br>
+    <br>
+    
+    <h1>DELETE</h1><br>
+	<h2>RECEIPE ID : <input type="text" id="receipe-id-delete"></h2><br> <br>
+	<button type="button" onclick="onDelete()">DELETE</button>
+    <p id = "delete-message"></p>
+    <br>
+    <br>
+ 
+    <script type="text/javascript" src="/scripts/requestSender.js"></script>
+	
+
+
+</body>
+</html>
