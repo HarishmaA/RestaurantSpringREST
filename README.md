@@ -1,1 +1,1 @@
-# RestaurantSpringREST
+# Restaurant-RESTService
